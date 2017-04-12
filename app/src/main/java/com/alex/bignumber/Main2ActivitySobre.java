@@ -1,11 +1,10 @@
-package com.example.olvia.bignumber;
+package com.alex.bignumber;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+
+import com.example.olvia.bignumber.R;
 
 public class Main2ActivitySobre extends AppCompatActivity {
 

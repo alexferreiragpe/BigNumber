@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40b785"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.olvia.bignumber.MainActivity"
-    tools:showIn="@layout/activity_main"
-    android:background="#40b785">
+    tools:context="com.example.olvia.bignumber.com.alex.bignumber.MainActivity"
+    tools:showIn="@layout/activity_main">
 
     <TextView
         android:id="@+id/textView"
@@ -41,16 +41,16 @@
         android:max="100" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Acerte o Número Maior"
-        android:id="@+id/textView2"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="bold|italic"
-        android:textSize="@dimen/abc_text_size_medium_material"
         android:layout_above="@+id/btnNumero2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text="Acerte o Número Maior"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/btnNumero1"
@@ -105,14 +105,14 @@
         android:textStyle="normal|bold" />
 
     <TextView
+        android:id="@+id/txtRecorde"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/txtRecordes"
-        android:layout_toRightOf="@+id/txtRecordes"
         android:layout_toEndOf="@+id/txtRecordes"
-        android:id="@+id/txtRecorde"
-        android:textSize="18sp"
+        android:layout_toRightOf="@+id/txtRecordes"
         android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp"
         android:textStyle="normal|bold" />
 
     <TextView
