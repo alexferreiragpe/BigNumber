@@ -47,7 +47,7 @@
                 android:text="Desenvolvedor"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/black"
-                android:textStyle="bold" />
+                android:textStyle="bold|italic" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -61,7 +61,8 @@
                 android:paddingStart="25dp"
                 android:text="Alex Ferreira"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/black"
+                android:textColor="#0000CD"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -74,7 +75,7 @@
                 android:text="Versão"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/black"
-                android:textStyle="bold" />
+                android:textStyle="bold|italic" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -101,7 +102,7 @@
                 android:text="Contato"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/black"
-                android:textStyle="bold" />
+                android:textStyle="bold|italic" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -115,7 +116,8 @@
                 android:paddingStart="25dp"
                 android:text="(19) 98803-0727"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/black"
+                android:textColor="#0000CD"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -130,7 +132,8 @@
                 android:paddingStart="25dp"
                 android:text="alexferreira@hotmail.com.br"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/black"
+                android:textColor="#0000CD"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -145,7 +148,8 @@
                 android:paddingStart="25dp"
                 android:text="http://alexferreira.wixsite.com/alex"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/black"
+                android:textColor="#0000CD"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>
