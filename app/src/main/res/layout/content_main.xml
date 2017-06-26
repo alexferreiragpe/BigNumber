@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:text="Big Number Game"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@android:color/black"
         android:textSize="@dimen/abc_text_size_display_1_material"
         android:textStyle="bold|italic" />
 
@@ -46,7 +46,7 @@
         android:layout_marginTop="49dp"
         android:text="Acerte o Número Maior"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@android:color/black"
         android:textSize="@dimen/abc_text_size_medium_material"
         android:textStyle="bold|italic" />
 
@@ -82,7 +82,7 @@
         android:layout_marginBottom="48dp"
         android:text="* Regras: \nAcertando o Número Maior ganha 1 ponto.\nErrando perde 1 ponto.\nZerando os Pontos, perde a Partida."
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@android:color/black"
         android:textStyle="bold|italic" />
 
     <TextView
@@ -94,7 +94,7 @@
         android:layout_marginBottom="46dp"
         android:text="Pontuação: "
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         android:textStyle="normal|bold" />
 

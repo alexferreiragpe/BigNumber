@@ -197,15 +197,15 @@ public class MainActivity extends AppCompatActivity implements Runnable {
 
     private int gerarAleatorio() {
         if (TotalPontos < 10) {
-            return (int) (Math.random() * 50 + 1);
+            return (int) (1 + 30 * Math.random());
         } else if (TotalPontos >= 10 && TotalPontos < 25) {
-            return (int) (Math.random() * 100 + 1);
+            return (int) (1 + 50 * Math.random());
         } else if (TotalPontos >= 25 && TotalPontos < 40) {
-            return (int) (Math.random() * 500 + 1);
+            return (int) (1 + 99 * Math.random());
         } else if (TotalPontos >= 40 && TotalPontos < 60) {
-            return (int) (Math.random() * 750 + 1);
+            return (int) (1 + 150 * Math.random());
         } else if (TotalPontos >= 60) {
-            return (int) (Math.random() * 1000 + 1);
+            return (int) (1 + 250 * Math.random());
         }
         return 0;
     }
@@ -238,17 +238,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         td.interrupt();
 
 
-        if (TotalPontos < 10) {
-            Thread.sleep(1);
-        } else if (TotalPontos >= 10 && TotalPontos < 25) {
-            Thread.sleep(0, 9);
-        } else if (TotalPontos >= 25 && TotalPontos < 40) {
-            Thread.sleep(0, 7);
-        } else if (TotalPontos >= 40 && TotalPontos < 60) {
-            Thread.sleep(0, 5);
-        } else if (TotalPontos >= 60 && TotalPontos < 80) {
-            Thread.sleep(0, 2);
-        }
+        gerarAleatorio();
 
         if (valorBotao1Random > valorBotao2Random) {
             TotalPontos = TotalPontos + 1;
@@ -326,17 +316,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         pb.setProgress(0);
         td.interrupt();
 
-        if (TotalPontos < 10) {
-            Thread.sleep(1);
-        } else if (TotalPontos >= 10 && TotalPontos < 25) {
-            Thread.sleep(0, 9);
-        } else if (TotalPontos >= 25 && TotalPontos < 40) {
-            Thread.sleep(0, 7);
-        } else if (TotalPontos >= 40 && TotalPontos < 60) {
-            Thread.sleep(0, 5);
-        } else if (TotalPontos >= 60 && TotalPontos < 80) {
-            Thread.sleep(0, 2);
-        }
+        gerarAleatorio();
 
         if (valorBotao2Random > valorBotao1Random) {
             TotalPontos = TotalPontos + 1;

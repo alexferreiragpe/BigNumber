@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#40b785"
+    android:background="@android:color/black"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -19,9 +19,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:background="@android:color/white"
         android:text="Big Number Game"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView5"
@@ -31,8 +33,10 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView4"
         android:layout_marginTop="55dp"
+        android:background="@android:color/white"
         android:text="Versão"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView6"
@@ -43,7 +47,7 @@
         android:layout_below="@+id/textView5"
         android:text="1.0.6"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/textView12"
@@ -54,7 +58,7 @@
         android:layout_below="@+id/textView11"
         android:text="alexferreira@hotmail.com.br"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/textView7"
@@ -64,8 +68,10 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView6"
         android:layout_marginTop="43dp"
+        android:background="@android:color/white"
         android:text="Desenvolvedor"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView11"
@@ -75,8 +81,10 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView8"
         android:layout_marginTop="37dp"
+        android:background="@android:color/white"
         android:text="Contato"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView14"
@@ -87,7 +95,7 @@
         android:layout_below="@+id/textView12"
         android:text="(19) 98803-0727"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/textView15"
@@ -98,7 +106,7 @@
         android:layout_below="@+id/textView14"
         android:text="http://alexferreira.wixsite.com/alex"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/textView8"
@@ -109,6 +117,6 @@
         android:layout_below="@+id/textView7"
         android:text="Alex Ferreira"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>
