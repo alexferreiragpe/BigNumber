@@ -5,10 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3CB371"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.alex.bignumber.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -16,9 +12,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingRight="5dp"
-        android:paddingStart="5dp">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
@@ -27,10 +24,8 @@
             android:layout_above="@+id/pbstatus"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="125dp"
-            android:layout_marginRight="125dp"
             android:background="@drawable/fundoazul"
+            android:padding="10dp"
             android:paddingLeft="10dp"
             android:text="Big Number Game"
             android:textAlignment="center"
@@ -38,20 +33,6 @@
             android:textSize="20sp"
             android:textStyle="bold|italic"
             tools:ignore="HardcodedText,ObsoleteLayoutParam,PrivateResource" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/btnNumero2"
-            android:layout_centerHorizontal="true"
-            android:text="Acerte o Número Maior"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/abc_text_size_medium_material"
-            android:textStyle="bold|italic"
-            tools:ignore="HardcodedText,PrivateResource" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,9 +47,10 @@
                 android:layout_above="@+id/btnNumero1"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginBottom="5dp"
-                android:background="#FF4500"
+                android:layout_margin="10dp"
+                android:background="@android:color/white"
                 android:max="100"
+                android:padding="20dp"
                 tools:ignore="Suspicious0dp" />
         </LinearLayout>
 
@@ -84,13 +66,13 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_margin="10dp"
                 android:layout_toLeftOf="@+id/textView2"
                 android:layout_toStartOf="@+id/textView2"
                 android:layout_weight="1"
                 android:background="@drawable/fundobotaonumero"
                 android:onClick="clickBotao1"
+                android:padding="10dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -100,11 +82,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pbstatus"
-                android:layout_marginTop="5dp"
+                android:layout_margin="10dp"
                 android:layout_toEndOf="@+id/textView2"
                 android:layout_weight="1"
                 android:background="@drawable/fundobotaonumero"
                 android:onClick="clickBotao2"
+                android:padding="10dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -113,17 +96,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtRecordes"
-                android:layout_width="match_parent"
+                android:layout_width="76dp"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/txtPonto"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="5dp"
-                android:layout_weight="1"
                 android:text="Recorde: "
                 android:textColor="@android:color/black"
                 android:textSize="15sp"
@@ -146,18 +129,12 @@
                 tools:ignore="ObsoleteLayoutParam" />
 
             <TextView
-                android:id="@+id/textView10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="1sp" />
-
-            <TextView
                 android:id="@+id/txtPonto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btnNumero1"
                 android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:text="Pontuação: "
@@ -171,7 +148,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="99dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ScrollView
@@ -185,30 +162,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_toLeftOf="@+id/BtnRecomecar"
-                        android:layout_toStartOf="@+id/BtnRecomecar"
-                        android:layout_weight="245.39"
-                        android:background="@drawable/fundotransparente"
-                        android:paddingBottom="10dp"
-                        android:paddingEnd="5dp"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="5dp"
-                        android:paddingTop="5dp"
-                        android:text="Regras: \nAcertando o Número Maior Ganha 1 Ponto. Errando Perde 1 Ponto.\nZerando os Pontos ou Barra de Progresso Completa Perde a Partida."
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="@android:color/black"
-                        android:textSize="10sp"
-                        android:textStyle="bold|italic"
-                        tools:ignore="HardcodedText,RtlHardcoded" />
                 </LinearLayout>
             </ScrollView>
 
@@ -219,8 +172,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/textView3"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/fundoazul"
                 android:onClick="Recomecar"

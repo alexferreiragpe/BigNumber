@@ -124,51 +124,68 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+        alertDialog.setTitle("BigNumber - Bem Vindo...");
+        alertDialog.setMessage("Regras:\n\nAcertando o Número Maior Ganha 1 Ponto. \nErrando Perde 1 Ponto.\nZerando os Pontos ou Barra de Progresso Completa:\nPerde a Partida!");
+        alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
-        hd = new Handler();
-        td = new Thread(MainActivity.this);
-        td.start();
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
 
-        db = openOrCreateDatabase("BigNumber", SQLiteDatabase.CREATE_IF_NECESSARY, null);
-        db.setVersion(1);
-        db.setLocale(Locale.getDefault());
-        db.setLockingEnabled(true);
-        db.execSQL("CREATE TABLE IF NOT EXISTS Recorde(_id INTEGER PRIMARY KEY AUTOINCREMENT, Record INTEGER)");
+                dialog.dismiss();
 
-        recordes = (TextView) findViewById(R.id.txtRecorde);
+                hd = new Handler();
+                td = new Thread(MainActivity.this);
+                td.start();
 
-        long numOfEntries = DatabaseUtils.queryNumEntries(db, "Recorde");
+                db = openOrCreateDatabase("BigNumber", SQLiteDatabase.CREATE_IF_NECESSARY, null);
+                db.setVersion(1);
+                db.setLocale(Locale.getDefault());
+                db.setLockingEnabled(true);
+                db.execSQL("CREATE TABLE IF NOT EXISTS Recorde(_id INTEGER PRIMARY KEY AUTOINCREMENT, Record INTEGER)");
 
-        if (numOfEntries == 0) {
-            // Tabela vazia, preencha com seus dados iniciais
-            recordes.setText("0");
-            Toast.makeText(getApplicationContext(), "Bem Vindo, Aproveite! \nNenhum Recorde Registrado", Toast.LENGTH_LONG).show();
+                recordes = (TextView) findViewById(R.id.txtRecorde);
 
-        } else {
-            // Tabela ja contem dados.
+                long numOfEntries = DatabaseUtils.queryNumEntries(db, "Recorde");
 
-            String selectQuery = "SELECT Record FROM Recorde";
+                if (numOfEntries == 0) {
+                    // Tabela vazia, preencha com seus dados iniciais
+                    recordes.setText("0");
+                    Toast.makeText(getApplicationContext(), "Bem Vindo, Aproveite! \nNenhum Recorde Registrado", Toast.LENGTH_LONG).show();
 
-            Cursor cursor = db.rawQuery(selectQuery, null);
+                } else {
+                    // Tabela ja contem dados.
 
-            if (cursor.moveToFirst()) {
-                do {
-                    int valor = Integer.parseInt(cursor.getString(cursor.getColumnIndex("Record")).toString());
-                    dados.add(valor);
-                } while (cursor.moveToNext());
-            }
+                    String selectQuery = "SELECT Record FROM Recorde";
 
-            int valorarray = dados.get(0);
+                    Cursor cursor = db.rawQuery(selectQuery, null);
 
-            for (int i = 0; i < dados.size(); i++) {
-                if (dados.get(i) > valorarray) {
-                    valorarray = dados.get(i);
+                    if (cursor.moveToFirst()) {
+                        do {
+                            int valor = Integer.parseInt(cursor.getString(cursor.getColumnIndex("Record")).toString());
+                            dados.add(valor);
+                        } while (cursor.moveToNext());
+                    }
 
+                    int valorarray = dados.get(0);
+
+                    for (int i = 0; i < dados.size(); i++) {
+                        if (dados.get(i) > valorarray) {
+                            valorarray = dados.get(i);
+
+                        }
+                    }
+
+                    recordes.setText(String.format(String.valueOf(valorarray)));
                 }
-            }
 
-            recordes.setText(String.format(String.valueOf(valorarray)));
-        }
+
+            }
+        });
+        alertDialog.setIcon(R.drawable.icon);
+        alertDialog.show();
+
+
 
         BtnValor1 = (Button) findViewById(R.id.btnNumero1);
         BtnValor2 = (Button) findViewById(R.id.btnNumero2);
